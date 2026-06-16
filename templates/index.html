@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigQuery Release Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>BigQuery Release Notes</h1>
+                <p>Stay up to date with the latest features, fixes, and improvements.</p>
+            </div>
+            <button id="refresh-btn" class="btn-primary">
+                <i class="fas fa-sync-alt" id="refresh-icon"></i>
+                <span id="refresh-text">Refresh</span>
+            </button>
+        </header>
+
+        <div id="loading-spinner" class="spinner-container hidden">
+            <div class="spinner"></div>
+            <p>Fetching latest updates...</p>
+        </div>
+
+        <main id="notes-container">
+            <!-- Notes will be injected here -->
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
